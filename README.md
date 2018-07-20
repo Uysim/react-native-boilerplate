@@ -2,10 +2,10 @@
 # react-native-boilerplate
 
 ### Dependencies
-- React
-- React Native
-- Native Base
-- React Navigation
+- [React](https://reactjs.org/)
+- [React Native](https://facebook.github.io/react-native/)
+- [Native Base](https://nativebase.io/)
+- [React Navigation](https://reactnavigation.org/)
 
 ## Awesome React Native
 Additional useful React Native library that can integrate with your app
