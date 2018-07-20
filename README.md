@@ -5,6 +5,7 @@
 - React
 - React Native
 - Native Base
+- React Navigation
 
 ## Awesome React Native
 Additional useful React Native library that can integrate with your app
