@@ -1,6 +1,11 @@
 
 # react-native-boilerplate
 
+### Dependencies
+- React
+- React Native
+- Native Base
+
 ## Awesome React Native
 Additional useful React Native library that can integrate with your app
 
@@ -8,7 +13,7 @@ Additional useful React Native library that can integrate with your app
 - [Map](https://github.com/react-community/react-native-maps) : Map Component
 - [Fast Image](https://github.com/DylanVann/react-native-fast-image) : Improve performance image with caching
 
-## TO DO
+### TO DO
 - [ ] Setup react-navigation
 - [ ] Setup redux
 - [ ] Setup redux-saga
