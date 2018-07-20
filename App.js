@@ -1,51 +1,15 @@
+import Home from './src/pages/Home';
+import Demo from './src/pages/Demo';
+import { createStackNavigator } from 'react-navigation';
 
-import React, {Component} from 'react';
-import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Footer,
-  FooterTab,
-  Button,
-  Left,
-  Right,
-  Body,
-  Icon,
-  Text
-} from 'native-base';
-
-
-type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <Container>
-        <Header>
-          <Left>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-          <Body>
-            <Title>Header</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
-          <Text>
-            This is Content Section
-          </Text>
-        </Content>
-        <Footer>
-          <FooterTab>
-            <Button full>
-              <Text>Footer</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
-      </Container>
-    );
+export default createStackNavigator({
+  Home: {
+    screen: Home
+  },
+  Demo: {
+    screen: Demo
   }
-}
-
+},
+{
+  initialRouteName: 'Home',
+});
