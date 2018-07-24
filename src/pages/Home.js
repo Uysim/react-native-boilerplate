@@ -13,12 +13,17 @@ import {
   Body,
   Icon,
   Text,
-  H1
+  H1,
+  Card,
+  CardItem,
+  variables
 } from 'native-base';
+import { connect } from 'react-redux';
+import { homeActions } from '@src/actions';
 
 
 type Props = {};
-export default class Home extends Component<Props> {
+class Home extends Component<Props> {
   static navigationOptions = {
     title: 'Home',
   };
@@ -30,13 +35,27 @@ export default class Home extends Component<Props> {
   render() {
     return (
       <Container>
-        <Content>
-          <H1>This is Home Page</H1>
+        <Content  contentContainerStyle={{ justifyContent: 'center', flex: 1, padding: 15 }}>
+          <Card>
+            <CardItem>
+              <Button onPress={()=>this.props.decrement()} danger>
+                <Text>-</Text>
+              </Button>
+              <Body style={styles.cardItem}>
+                <H1>
+                  {this.props.count}
+                </H1>
+              </Body>
+              <Button onPress={()=>this.props.increment()} primary>
+                <Text>+</Text>
+              </Button>
+            </CardItem>
+          </Card>
         </Content>
         <Footer>
           <FooterTab>
-            <Button onPress={()=>this.goToDemo()} primary full>
-              <Text style={{color: '#fff'}}> Go To Demo Page </Text>
+            <Button onPress={()=>this.goToDemo()} full>
+              <Text> Go To Demo Page </Text>
             </Button>
           </FooterTab>
         </Footer>
@@ -45,3 +64,17 @@ export default class Home extends Component<Props> {
   }
 }
 
+const styles = {
+  cardItem: {
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
+}
+
+const mapStateToProps = state => ({
+  count: state.count
+})
+
+
+
+export default connect(mapStateToProps, homeActions)(Home);

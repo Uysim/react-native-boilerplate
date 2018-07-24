@@ -47,7 +47,7 @@ export default class Demo extends Component<Props> {
         <Footer>
           <FooterTab>
             <Button onPress={()=>this.backToHome()} primary full>
-              <Text style={{color: '#fff'}}> Go To Demo Page </Text>
+              <Text> Go To Demo Page </Text>
             </Button>
           </FooterTab>
         </Footer>
