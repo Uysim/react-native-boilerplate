@@ -1,5 +1,7 @@
 
 import React, {Component} from 'react';
+import { View } from 'react-native';
+import { connect } from 'react-redux';
 import {
   Container,
   Header,
@@ -17,9 +19,11 @@ import {
 
 import { NavigationActions, StackActions } from 'react-navigation';
 
+import { demoActions } from '@src/actions';
+
 
 type Props = {};
-export default class Demo extends Component<Props> {
+class Demo extends Component<Props> {
   static navigationOptions = {
     title: 'Demo',
   };
@@ -36,18 +40,27 @@ export default class Demo extends Component<Props> {
     this.props.navigation.dispatch(resetAction);
   }
 
+
+
   render() {
     return (
       <Container>
-        <Content>
-          <Text>
-            This is Demo Page
-          </Text>
+        <Content padder>
+          <View style={styles.jsonBlock}>
+            <Text style={styles.jsonBlockText}>
+              {JSON.stringify(this.props.demo)}
+            </Text>
+          </View>
+          <Button onPress={()=>this.props.create()} block>
+            <Text>
+              Fetch Demo
+            </Text>
+          </Button>
         </Content>
         <Footer>
           <FooterTab>
-            <Button onPress={()=>this.backToHome()} primary full>
-              <Text> Go To Demo Page </Text>
+            <Button onPress={()=>this.backToHome()} full>
+              <Text> Go To Home Page </Text>
             </Button>
           </FooterTab>
         </Footer>
@@ -55,4 +68,20 @@ export default class Demo extends Component<Props> {
     );
   }
 }
+
+const styles = {
+  jsonBlock: {
+    marginVertical: 32
+  },
+  jsonBlockText: {
+    textAlign: 'center'
+  }
+}
+
+const mapStateToProps = state => ({
+  demo: state.demo
+})
+
+
+export default connect(mapStateToProps, demoActions)(Demo);
 

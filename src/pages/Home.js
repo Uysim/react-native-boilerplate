@@ -1,5 +1,7 @@
 
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
 import {
   Container,
   Header,
@@ -18,7 +20,7 @@ import {
   CardItem,
   variables
 } from 'native-base';
-import { connect } from 'react-redux';
+
 import { homeActions } from '@src/actions';
 
 
