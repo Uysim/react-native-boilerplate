@@ -16,6 +16,7 @@ Additional useful React Native library that can integrate with your app
 - [Map](https://github.com/react-community/react-native-maps) : Map Component
 - [Fast Image](https://github.com/DylanVann/react-native-fast-image) : Improve performance image with caching
 - [i18n](https://github.com/AlexanderZaytsev/react-native-i18n)
+- [UI Kitten](https://github.com/akveo/react-native-ui-kitten)
 
 ### TO DO
 - [ ] Setup redux-saga
