@@ -7,6 +7,7 @@
 - [Native Base](https://nativebase.io/)
 - [React Navigation](https://reactnavigation.org/)
 - [Redux](https://redux.js.org/)
+- [Redux Saga](https://redux-saga.js.org/)
 
 ## Awesome React Native
 Additional useful React Native library that can integrate with your app
