@@ -6,6 +6,7 @@
 - [React Native](https://facebook.github.io/react-native/)
 - [Native Base](https://nativebase.io/)
 - [React Navigation](https://reactnavigation.org/)
+- [Redux](https://redux.js.org/)
 
 ## Awesome React Native
 Additional useful React Native library that can integrate with your app
