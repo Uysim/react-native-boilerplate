@@ -1,5 +1,5 @@
 
-# react-native-boilerplate
+# React Native Boilerplate
 
 ### Dependencies
 - [React](https://reactjs.org/)
